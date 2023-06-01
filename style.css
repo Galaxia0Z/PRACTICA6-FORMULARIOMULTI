@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    place-items: center;
+    background: url(fondo1.jpg);
+    background-image: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+}
+
+
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+h3{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.text-center{
+    text-align: center;
+    color: #000000;
+
+}
+
+.with-50{
+    width: 50%;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0 64px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.progressbar::before, .progreso{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: rgb(149, 225, 18);
+    counter-reset: step;
+}
+
+.progreso{
+    background-color: #f84008;
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+.form{
+    width: clamp(352px, 333%, 474px);
+    margin:0 auto;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 24px;
+    background-color: rgb(177, 213, 234);
+    
+}
+
+.box{
+    display: none;
+}
+
+.box1{
+    display:block
+    
+}
+
+.input-group {
+    margin: 32px 0;
+    font-size: 27px;
+
+}
+
+.paso{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(224, 120, 23);
+    border-radius: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.paso::before{
+    counter-increment: step;
+    content: counter(step);
+}
+
+
+.paso::after{
+    
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 8px);
+    font-size: 16px;
+    color: rgb(12, 12, 12);
+}
+
+.paso1{
+    background-color:rgb(67, 23, 224);
+    color: rgb(11, 4, 4);
+}
+
+.btn{
+    display: grid;
+    grid-template-columns: repeat(2, 225px);
+    gap: 24px;
+}
+
+.btn{
+    padding: 12px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #128DDA;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-style: bold;
+    transition: all 250ms ease-in-out;
+
+}
+
+.btn:hover{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px;
+
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn_enviar {
+
+    background-color: #12da41;
+    
+}
+
+
+
+
